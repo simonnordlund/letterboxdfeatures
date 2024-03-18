@@ -12,10 +12,7 @@ column_lists = {col: df[col].tolist() for col in df.columns} # Converts each col
 links = column_lists['Letterboxd URI']
 names = column_lists['Name'] #Access the value of the key "Name" and store it as names .
 
-for i in range(4):
+for i in range(4): #Generates four movies from my watchlist then opens their respective Letterboxd page.
     movie = round(np.random.uniform(0,len(names))) #Creates a uniformly random integer that corresponds to a movie in my watchlist.
     #print(names[movie] + " This is the link " + links[movie])
     webbrowser.open(links[movie])
-
-
-
